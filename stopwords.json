@@ -1,0 +1,21 @@
+{
+  "stopwords": [
+    "і","та","й","або","але","це","що","як","у","в","на","до","по","із","зі","про","таких","також","для",
+    "ми","ви","вони","з","від","над","під","при","же","би","то",
+
+    "the","and","or","but","this","that","with","for","from","to","of",
+    "in","on","by","as","is","are","be","a","an","it","we","you","they",
+    "your","yours","our","ours","their","theirs","its","more","menu","main",
+
+    "и","или","но","это","как","в","на","по","из","для","мы","вы","они",
+    "с","от","над","под","при","же","бы","то",
+
+    "home","close","open","search","submit","apply","learn","read","next","prev",
+    "cookie","cookies","policy","privacy","terms","gdpr","consent","settings",
+    "accept","decline","login","logout","signin","signup","register",
+    "account","profile","dashboard","newsletter","subscribe","subscribing",
+    "unsubscribe","pricing","features","docs","documentation","api","status",
+    "contact","support","help","faq","about","careers","jobs", "and", "quot",
+    "with", "for", "the", "are", "all", "click", "available", "see", "back", "plans", "standard"
+  ]
+}
