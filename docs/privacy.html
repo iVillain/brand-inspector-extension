@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Політика конфіденційності — Brand Inspector</title>
+  <meta name="description" content="Політика конфіденційності розширення Brand Inspector: що обробляємо локально, що не збираємо, і як працює опційний зовнішній AI-фільтр." />
+  <meta property="og:title" content="Політика конфіденційності — Brand Inspector" />
+  <meta property="og:description" content="Розширення обробляє дані тільки локально у вашому браузері після натискання Scan. За замовчуванням нічого не передає третім сторонам." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#111827" />
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --panel: #111827;
+      --text: #e5e7eb;
+      --muted:#9ca3af;
+      --brand:#22c55e;
+      --link:#60a5fa;
+      --ring: #1f2937;
+      --radius: 16px;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --max: 860px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb; --panel:#ffffff; --text:#111827; --muted:#6b7280;
+        --ring:#e5e7eb; --link:#2563eb; --brand:#16a34a;
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text); background:radial-gradient(1200px 600px at 10% -10%, rgba(96,165,250,.12), transparent 60%),
+                          radial-gradient(1000px 500px at 90% 0%, rgba(34,197,94,.12), transparent 60%),
+                          var(--bg);
+    }
+    .wrap{max-width:var(--max); margin:64px auto; padding:0 24px}
+    header{margin-bottom:28px}
+    h1{
+      font-size: clamp(28px, 5vw, 40px);
+      line-height:1.15; margin:0 0 8px; letter-spacing:.2px;
+      background: linear-gradient(90deg, var(--text) 0%, #9ca3af 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .subtitle{color:var(--muted); margin:0 0 18px; font-size:15px}
+    .card{
+      background:var(--panel); border-radius:var(--radius); box-shadow:var(--shadow);
+      border:1px solid var(--ring); padding:28px;
+    }
+    h2{font-size:20px; margin:0px}
+    p{margin:12px 0}
+    ul{margin:8px 0 16px 20px}
+    li{margin:6px 0}
+    .grid{display:grid; gap:16px; grid-template-columns: 1fr!important;}
+    @media (min-width:760px){ .grid{grid-template-columns:1fr 1fr} }
+    code, .kbd{
+      background:rgba(255,255,255,.06); border:1px solid var(--ring); padding:2px 6px; border-radius:8px; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:13px;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .badge{display:inline-block; padding:3px 10px; border-radius:999px; background:rgba(34,197,94,.15); color:#86efac; border:1px solid rgba(34,197,94,.35); font-size:12px; letter-spacing:.3px}
+    footer{margin:28px 0 64px; color:var(--muted); font-size:14px}
+    .brand{display:flex; gap:10px; align-items:center; margin-bottom:14px}
+    .dot{width:10px; height:10px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+    .list-compact li{margin:4px 0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="dot"></span><span class="badge">Brand Inspector · Chrome Extension</span></div>
+      <h1>Політика конфіденційності</h1>
+      <p class="subtitle">Останнє оновлення: <span id="updated">2025</span></p>
+    </header>
+
+    <section class="card">
+      <h2>Коротко</h2>
+      <p><strong>Brand Inspector</strong> обробляє дані <em>лише активної вкладки</em> і лише після натискання кнопки <span class="kbd">Scan</span>. Обробка відбувається локально у вашому браузері. За замовчуванням розширення <strong>не збирає</strong>, <strong>не зберігає</strong> і <strong>не передає</strong> жодних персональних даних.</p>
+    </section>
+
+    <div class="grid" style="margin-top:16px">
+      <section class="card">
+        <h2>Які дані обробляються</h2>
+        <ul class="list-compact">
+          <li>HTML/метадані та частина видимого тексту сторінки (для формування ключових слів).</li>
+          <li>Логотипи, у т.ч. SVG (виявлення за евристиками та семантичними мітками).</li>
+          <li>Назви шрифтів і джерела підключення (Google Fonts / Adobe / Custom).</li>
+          <li>Кольорова палітра сторінки (primary/secondary/accent/background/foreground/text).</li>
+        </ul>
+        <p>Усе це використовується лише для миттєвого відображення результатів у попапі.</p>
+      </section>
+
+      <section class="card">
+        <h2>Чого ми не робимо</h2>
+        <ul class="list-compact">
+          <li>Не ведемо аналітики, не використовуємо cookies.</li>
+          <li>Не передаємо дані третім сторонам і не продаємо їх.</li>
+          <li>Не читаємо історію переглядів і не відстежуємо поведінку.</li>
+          <li>Не виконуємо «віддалений код»; усі скрипти — у складі пакета розширення.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Зовнішні API (опційно)</h2>
+      <p>Користувач може за бажанням вказати власний API-токен для покращеної AI-фільтрації зображень (наприклад, визначення логотипів). У такому разі розширення може надсилати <em>URL-адреси зображень</em> лише на <em>endpoint, вказаний користувачем</em>. Ця можливість <strong>вимкнена за замовчуванням</strong> і не є необхідною для базової роботи.</p>
+    </section>
+
+    <div class="grid" style="margin-top:16px">
+      <section class="card">
+        <h2>Правові підстави</h2>
+        <p>Обробка здійснюється на підставі <strong>згоди користувача</strong> (натискання <span class="kbd">Scan</span>). Доступ обмежено активною вкладкою і триває лише протягом сеансу сканування.</p>
+      </section>
+
+      <section class="card">
+        <h2>Зв’язок</h2>
+        <p>Питання щодо приватності: <a href="mailto:rozbytskyi.m@gmail.com">rozbytskyi.m@gmail.com</a></p>
+        <p>Власник/розробник: <strong>Розбицький М.</strong></p>
+      </section>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Brand Inspector. Усі права захищено.
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const y = new Date().getFullYear();
+      document.getElementById('year').textContent = y;
+      document.getElementById('updated').textContent = y;
+    })();
+  </script>
+</body>
+</html>
